@@ -41,8 +41,24 @@ public class VaccineSideEffectRegistrarTest {
         Assert.assertTrue(output.contains("chill"));
         Assert.assertTrue(output.contains("temperature"));
         Assert.assertTrue(output.contains("cough"));
+    }
 
+    @Test
+    public void testPrint13ElementWhenExists() {
+        for (int i = 0; i < 9; i++) {
+            registrar.registerSideEffect("a");
+        }
+        registrar.registerSideEffect("kit 13");
+        registrar.print13Element();
+        Assert.assertTrue(consoleContainer.toString().contains("kit 13"));
 
     }
 
+    @Test
+    public void testPrint13ElementWhenNoExists() {
+
+        registrar.print13Element();
+        Assert.assertFalse(consoleContainer.toString().contains("null"));
+
+    }
 }

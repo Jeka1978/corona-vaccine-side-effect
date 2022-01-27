@@ -34,7 +34,7 @@ public class VaccineSideEffectRegistrarTest {
     }
 
     @Test
-    public void testCountLogic() {
+    public void testPrintAll() {
 
         registrar.printAll();
         String output = consoleContainer.toString();

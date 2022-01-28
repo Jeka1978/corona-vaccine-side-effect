@@ -41,6 +41,7 @@ public class VaccineSideEffectRegistrarTest {
         Assert.assertTrue(output.contains("chill"));
         Assert.assertTrue(output.contains("temperature"));
         Assert.assertTrue(output.contains("cough"));
+        Assert.assertFalse(output.contains("null"));
     }
 
     @Test

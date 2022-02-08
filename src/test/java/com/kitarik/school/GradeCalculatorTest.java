@@ -9,6 +9,18 @@ import org.junit.Test;
 public class GradeCalculatorTest {
 
     @Test
+    public void testTotalAndAvg() {
+        GradeCalculator gradeCalculator = new GradeCalculator();
+        gradeCalculator.addMark(96);
+        gradeCalculator.addMark(90);
+        gradeCalculator.addMark(90);
+        int avg = gradeCalculator.average();
+        int sum = gradeCalculator.sum();
+        Assert.assertEquals(276,sum);
+        Assert.assertEquals(92,avg);
+    }
+
+    @Test
     public void testMarkCount() {
         GradeCalculator gradeCalculator = new GradeCalculator();
         gradeCalculator.addMark(100);
